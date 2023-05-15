@@ -1,7 +1,7 @@
 const Header = () => {
   const headerStyle = {
     padding: "20px 0",
-    lineHeight: "1.5em",
+    lineHeight: "1.5em"
   };
   const titleStyle = {
     fontSize: "6rem",
@@ -9,7 +9,7 @@ const Header = () => {
     marginBottom: "2rem",
     lineHeight: "1em",
     color: "#ececec",
-    textAlign: "center",
+    textAlign: "center"
   };
 
   return (

@@ -11,7 +11,7 @@ const TodoItem = ({ id, title, setTodos }) => {
       setIsLoading(true);
       await deleteTodo(id);
 
-      setTodos((prev) => prev.filter((item) => item.id !== id));
+      setTodos(prev => prev.filter(item => item.id !== id));
     } catch (error) {
       console.error(error);
       alert("Something went wrong.");

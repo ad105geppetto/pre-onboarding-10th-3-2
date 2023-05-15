@@ -14,7 +14,7 @@ const InputTodo = ({ setTodos }) => {
   }, [setFocus]);
 
   const handleSubmit = useCallback(
-    async (e) => {
+    async e => {
       try {
         e.preventDefault();
         setIsLoading(true);
@@ -28,7 +28,7 @@ const InputTodo = ({ setTodos }) => {
         const { data } = await createTodo(newItem);
 
         if (data) {
-          return setTodos((prev) => [...prev, data]);
+          return setTodos(prev => [...prev, data]);
         }
       } catch (error) {
         console.error(error);
@@ -38,7 +38,7 @@ const InputTodo = ({ setTodos }) => {
         setIsLoading(false);
       }
     },
-    [inputText, setTodos],
+    [inputText, setTodos]
   );
 
   return (
@@ -48,7 +48,7 @@ const InputTodo = ({ setTodos }) => {
         placeholder="Add new todo..."
         ref={ref}
         value={inputText}
-        onChange={(e) => setInputText(e.target.value)}
+        onChange={e => setInputText(e.target.value)}
         disabled={isLoading}
       />
       {!isLoading ? (
