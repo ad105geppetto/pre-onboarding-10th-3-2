@@ -1,9 +1,10 @@
 import { FaSpinner, FaTrash } from "react-icons/fa";
 import { useCallback, useState } from "react";
 
-import { deleteTodo } from "../api/todo";
+import { deleteTodo } from "../../api/todo";
+import { ITodoItemProps } from "./TodoItem.types";
 
-const TodoItem = ({ id, title, setTodos }) => {
+const TodoItem = ({ id, title, setTodos }: ITodoItemProps) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleRemoveTodo = useCallback(async () => {
