@@ -17,3 +17,6 @@ package-lock*
 *lock*
 
 .env
+
+# eslint
+.eslintcache
